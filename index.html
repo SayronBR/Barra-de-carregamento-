@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@100&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <h3 class='texto'>carregando...</h3>
+    <div class="loading">
+        <div id="carrega" class="carregamento"></div>
+      
+    </div>
+</body>
+</html>
+
+<script>
+
+</script>
+
+<style>
+body{
+    font-family: 'Barlow', sans-serif;
+    background: rgb(7, 5, 34);
+}
+.texto{
+    color: #D4AF37;
+    position: absolute;
+    left: 50%;
+    top: 50%; 
+    transition: 1s;
+     transform: translate(-50%,-50%);
+     animation: piscar 1s infinite; 
+     
+}
+.loading{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    height: 2px;
+    border-radius: 2px;
+    width: 300px;
+   background: rgb(70, 70, 70);
+}
+.carregamento{
+    width: 0;
+      height: 1px;
+    height: 2px;
+    border-radius: 2px;
+    background:linear-gradient(to right, #BF953F,  #B38728, #FBF5B7, #AA771C);
+      animation: subir 5s infinite; 
+}
+
+  @keyframes subir{
+    from{
+        width:1%
+    }
+    to{
+        width:100%
+    }
+}
+
+@keyframes piscar{
+    from{
+        opacity:1%
+    }
+    to{
+        opacity:100%
+    }
+}
+
+</style>
